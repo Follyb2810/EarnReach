@@ -1,0 +1,209 @@
+*{
+    --color1:  #F5F2EB;
+    --color2: #EBA417;
+    /* font-family: fantasy; */
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: var(--color1); */
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    color: var(--color2);
+    border: 1px solid transparent;
+    background-color:var(--color1);
+    height: fit-content;
+}
+header div img{
+    height: 52px;
+    width: 52px;
+}
+.headerMenu{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+}
+.headerMenu ol{
+    display: flex;
+    
+}
+.headerMenu ol li{
+    padding: 10px;
+    list-style-type: none;
+}
+/*FrontPage css*/
+main{
+    color: var(--color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: fit-content;
+    padding: 20px ;
+    background: linear-gradient(to bottom right,var(--color1) 60%,var(--color2) 40%);
+}
+main h1{
+    
+/* font-family: 'Acumin Pro'; */
+/* font-style: italic; */
+margin: 0;
+font-weight: 700;
+font-size: 90px;
+line-height: 108px;
+}
+main p{
+    width: 300px;
+    height: 119px;
+    /* font-family: 'Acumin Pro'; */
+    /* font-style: normal; */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: initial;
+    margin:0 0 20px 5px ;
+    
+   
+}
+#getStarted{
+    width: 500px;
+    /* height: 20px; */
+    background: var(--color2);
+    border-radius: 12px;
+    color: black;
+    padding: 10px;
+}
+
+/*Side Logo css*/
+.sideLogo{
+    display: flex;
+    max-height: 150vh;
+    /* height: 100%; */
+    position: relative;
+}
+.sideImage{
+    position: absolute;
+    z-index: 3;
+    width: 500px;
+    height: 650px;
+    left: 30px;
+    /* height: 20px; */
+
+}
+.sideLeft{
+    width: 30%;
+    background-color: var(--color2);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+ 
+}
+.sideRight{
+    width: 70%;
+    border-radius: 20px;    
+    /* background-color: var(--color1); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 100px;
+    height: 200vh;
+}
+.formSection h3{
+    font-weight: 700;
+font-size: 30px;
+line-height: 52px;
+letter-spacing: 0.06em;
+margin-top: 40px;
+color: #000000;
+    
+}
+#signSocial{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 30px;
+    margin-top: 40px;
+}
+#signSocial div{
+    border: 2px solid #000000;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px 10px;
+}
+#or{
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 30px;
+    
+}
+#or::before{
+    content:"--";
+}
+#or::after{
+    content:"--";
+}
+.signIn div{
+    position: relative;
+}
+.signIn div input{
+    border: none;
+    padding-top: 20px;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    color: blueviolet;
+}
+.signIn div label{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+.signIn div label::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5afed3;
+
+}
+.signIn button{
+    border:none;
+    background: #EBA417;
+    border-radius: 12px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+letter-spacing: 5px;
+
+color: #F5F2EB;
+    margin: 30px 0 20px;
+}
+.signIn div{
+    font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.08em;
+color: #000000;
+}
+.signIn div >span{
+    color: var(--color2);
+}
+
