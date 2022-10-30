@@ -32,15 +32,15 @@ class Side extends Component{
                                 <form action="" className="signIn">
                                         <div >
                                             <input type="text" />
-                                            <label For=""><span>Full Name</span></label>
+                                            <label ><span>Full Name</span></label>
                                         </div>
                                         <div>
                                             <input type="text" />
-                                            <label For=""><span>Email</span></label>
+                                            <label ><span>Email</span></label>
                                         </div>
                                         <div>
                                             <input type="text" />
-                                            <label For=""><span>Password</span></label>
+                                            <label ><span>Password</span></label>
                                         </div>
                                     <button>Create Account</button>
                                     <div>You already Have an account?<span>Sign In</span></div>

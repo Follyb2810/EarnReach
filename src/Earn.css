@@ -1,6 +1,9 @@
-*{
+:root{
     --color1:  #F5F2EB;
     --color2: #EBA417;
+    --color3: #FAEBC8;
+}
+*{
     /* font-family: fantasy; */
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -170,6 +173,11 @@ color: #000000;
     pointer-events: none;
     border-bottom: 1px solid black;
 }
+.signIn div label > span{
+    position: absolute;
+    top: 10px;
+    color:red
+}
 .signIn div label::after{
     content: "";
     position: absolute;
@@ -205,5 +213,311 @@ color: #000000;
 }
 .signIn div >span{
     color: var(--color2);
+}
+/* Sidebar css*/
+.sidebar-logotop{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.main{
+    display: flex;
+    height: 100vh;
+}
+.sidebar{
+    width: 260px;
+    flex-shrink: 0;
+    background-color: var(--color1);
+    height: 100%;
+    overflow: auto;
+}
+.container{
+    padding: 1em;
+    background-color: radial-gradient(var(--color1),var(--color2));
+    /* flex-shrink: 1; */
+}
+.forum{
+    padding: 0.55em .25em;
+    transition: all .5s;
+    display: block;
+    overflow: hidden;
+}
+.forum:hover{
+    background-color:var(--color3);
+}
+.forum-title{
+    display: flex;
+    font-size: 1.2em;
+    justify-content: space-between;
+}
+.overView{
+    padding: 0.55em .25em;
+    transition: all .5s;
+    display: block;
+    /* transition: all 2s; */
+}
+.overView:hover{
+    background-color:var(--color3);
+    /* background-color: rgba(255, 255, 255, .1); */
+}
+.overView-title{
+    display: flex;
+    font-size: 1.2em;
+    justify-content: space-between;
+}
+.overView-title span i{
+    display: inline-block;
+    width: 1.5em;
+}
+.overView-title .toggle-btn{
+    cursor: pointer;  
+    transition: all 0.3s;
+}
+.overView.open .overView-title .toggle-btn{
+    transform: rotate(180deg);
+}
+.overContent{
+    padding-top:.10em;
+    height: 0;
+    overflow: hidden;
+    font-size: 1em;
+    background-color: var(--color1);
+}
+.overContent >ul > li{
+padding: 10px;
+}
+.overContent >ul > li:hover{
+    background-color: var(--color3);
+}
+.overView.open .overContent{
+    height: auto;
+}
+.market{
+    padding: 0.55em .25em;
+    transition: all .5s;
+    display: block;
+}
+.market:hover{
+    background-color:var(--color3);
+    /* background-color: red; */
+}
+.market-title{
+    display: flex;
+    font-size: 1.2em;
+    justify-content: space-between;
+}
+.market-title span i{
+    display: inline-block;
+    width: 1.5em;
+}
+.marketContent{
+    padding-top:.10em;
+    height: 0;
+    overflow: hidden;
+    font-size: 1em;
+    background-color: var(--color1);
+}
+.market-title .toggle-btn{
+    cursor: pointer;  
+    transition: all 0.3s;
+}
+.market.open .toggle-btn{
+    transform: rotate(180deg);
+
+}
+.market.open .marketContent{
+    height: auto;
+}
+.marketContent > ol > li{
+    padding: 10px;
+}
+.marketContent > ol > li:hover{
+    background-color:var(--color3);
+}
+/*Ads Content*/
+.ads >h1 p{
+    text-align: center;
+    margin: 20px;
+}
+.adsContent{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    margin: 30px;
+    place-content: center;
+    gap: 30px;
+    
+}
+.adsHandle{
+    display: flex;
+    gap: 20px;
+}
+.adsContent i{
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+/*PosyAds Css*/
+.postAds{
+    display: grid;
+    place-items: center;
+    /* align-items: center; */
+    padding: 50px;
+    background-color: #F5F2EB;
+    border: none;
+    margin: 10px 20%;
+    /* width: fit-content; */
+}
+.addPace{
+    display: flex;
+    /* position: relative; */
+}
+#adsAbout{
+    /* position: absolute; */
+    background-color: var(--color1);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2px 100px;
+    transform: translateX(20px);
+    z-index: 3;
+    cursor: pointer;
+    /* top: 50px; */
+}
+#adsDetails{
+    /* position: absolute; */
+    background-color: var(--color2);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2px 100px;
+    cursor: pointer;
+   
+
+}
+.postAds > h1{
+    font-weight: bolder;
+    margin:10px 0 20px;
+}
+.adsAboutSelect{
+    display: none;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+
+}
+.adsAboutSelect.active{
+    display: flex;
+    flex-direction: column;
+}
+/* .adsAboutSelect.active.adsDetailsSelect{ */
+    /* display: none; */
+    /* flex-direction: column; */
+/* } */
+.adsAboutSelect.active.adsDetailsSelect{
+    display: none;
+    /* flex-direction: column; */
+}
+.adsDetailsSelect.active{
+    display: flex;
+    flex-direction: column; 
+}
+ .adsSelect{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    /* display: none; */
+}
+/* .adsSelect.active{
+    display: flex;
+    flex-direction: column;
+} */
+.adsSelect select{
+    display: block;
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
+
+
+.adsAboutSelect > button{
+    background-color: green;
+    width: 200px;
+    /* padding: 5px 30px; */
+    border: none;
+    margin: auto;
+
+    /* border-radius: 10px; */
+ }
+.adsImage{
+    margin-top: 20px;
+    padding: 10px;
+}
+.adsImage >i{
+    font-size: 70px;
+} 
+/* .adsDetailsSelect{
+    display: none;
+} */
+/* .adsDetailsSelect.active{
+    display: flex;
+    flex-direction: column;
+}  */
+.adsDetailsInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.adsDetailsInput > div input{
+    display: block;
+    margin: 10px ;
+    /* margin: 10px; */
+    width: 250px;
+    height: 30px;
+}
+.adsDetailsInput > div select{
+    display: block;
+    margin: 10px;
+    width: 250px;
+    height: 30px;
+}
+/* .adsDetailsSelect{
+    display: none;
+}
+.adsDetailsSelect.active{
+    display: flex;
+    flex-direction: column;
+} */
+.adsDetailsSelect  textarea{
+    margin: 10px;
+    display: block;
+}
+.adsAmount,.adsBulk{
+    margin: 10px ;
+    width: 250px;
+    height: 30px;
+}
+/* .adsDetailsSelect  input{
+    margin: 10px ;
+    width: 250px;
+    height: 30px;
+    display: block;
+} */
+#negotiate{
+    margin: 5px;
+    /* display: inline; */
+}
+.active{
+    display: flex;
+}
+/*Card Css*/
+.card{
+    height: 200px;
+    width: 150px;
+    border-radius: 8px;
+    border: 1px solid black;
+
 }
 
